@@ -1,3 +1,5 @@
+# Apt Cacher NG image [![Build Status](https://travis-ci.org/3d-pro/apt-cacher-ng.svg?branch=master)](https://travis-ci.org/3d-pro/apt-cacher-ng)
+
 ## Build
 ```
   docker build -t apt-cacher-ng:latest .
