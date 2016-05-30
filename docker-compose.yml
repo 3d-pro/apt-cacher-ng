@@ -1,0 +1,14 @@
+apt-cacher-ng:
+  image: 3dpro/apt-cacher-ng
+  container_name: apt-cacher-ng
+  hostname: apt-cacher-ng
+  restart: always
+  ports:
+   - "3142:3142"
+  volumes_from:
+    - data
+
+data:
+  image: 3dpro/apt-cacher-ng
+  container_name: apt-cacher-ng-data
+  command: "/bin/true"
