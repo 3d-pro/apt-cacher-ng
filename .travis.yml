@@ -5,5 +5,5 @@ services:
 script:
    - docker pull debian:jessie
    - docker build -t 3dpro/apt-cacher-ng .
-   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
    - docker push 3dpro/apt-cacher-ng

@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:sid
 MAINTAINER Kittipun Khantitrirat <boot191@gmail.com>
 
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8 HOME=/root DEBIAN_FRONTEND=noninteractive FAKE_CHROOT=1 INITRD=No
