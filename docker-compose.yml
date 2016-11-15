@@ -9,6 +9,6 @@ apt-cacher-ng:
     - data
 
 data:
-  image: 3dpro/apt-cacher-ng
+  image: tianon/true
   container_name: apt-cacher-ng-data
   command: "/bin/true"
