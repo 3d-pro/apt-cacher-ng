@@ -11,4 +11,3 @@ apt-cacher-ng:
 data:
   image: tianon/true
   container_name: apt-cacher-ng-data
-  command: "/bin/true"
