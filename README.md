@@ -1,4 +1,4 @@
-# Apt Cacher NG image of Debian Jessie [![Build Status](https://travis-ci.org/3d-pro/apt-cacher-ng.svg?branch=master)](https://travis-ci.org/3d-pro/apt-cacher-ng)
+# Apt Cacher NG image of Debian Sid [![Build Status](https://travis-ci.org/3d-pro/apt-cacher-ng.svg?branch=master)](https://travis-ci.org/3d-pro/apt-cacher-ng)
 
 ## Build
 ```
