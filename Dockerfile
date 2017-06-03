@@ -6,7 +6,7 @@ RUN rm /etc/localtime && \
     ln -s /usr/share/zoneinfo/Asia/Bangkok /etc/localtime && \
     echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && \
     apt-get update && \
-    apt-get install -y locales && \
+    apt-get install -y procps locales && \
     locale-gen en_US.UTF-8 && \
     dpkg-reconfigure -f noninteractive tzdata && \
     update-locale LANG=en_US.UTF-8 && \
