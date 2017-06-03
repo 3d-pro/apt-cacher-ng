@@ -1,14 +1,14 @@
-FROM debian:sid
-MAINTAINER Kittipun Khantitrirat <boot191@gmail.com>
+FROM debian:experimental
 
-ENV LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8 HOME=/root DEBIAN_FRONTEND=noninteractive FAKE_CHROOT=1 INITRD=No
+ENV LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8 HOME=/root DEBIAN_FRONTEND=noninteractive INITRD=No TERM=xterm
 ADD build-files /build-files
-RUN mv /usr/bin/ischroot /usr/bin/ischroot.original && \
-    mv /build-files/ischroot /usr/bin/ischroot && \
-    echo "Asia/Bangkok" > /etc/timezone && \
+RUN rm /etc/localtime && \
+    ln -s /usr/share/zoneinfo/Asia/Bangkok /etc/localtime && \
     echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && \
     apt-get update && \
     apt-get install -y locales && \
+    locale-gen en_US.UTF-8 && \
+    dpkg-reconfigure -f noninteractive tzdata && \
     update-locale LANG=en_US.UTF-8 && \
     apt-get update && \
     apt-get -y dist-upgrade && \
